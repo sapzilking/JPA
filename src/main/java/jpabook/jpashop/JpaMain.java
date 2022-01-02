@@ -1,4 +1,4 @@
-package hellojpa;
+package jpabook.jpashop;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -14,8 +14,6 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Member findMember = em.find(Member.class, 1L);
-            findMember.setName("updateName");
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
